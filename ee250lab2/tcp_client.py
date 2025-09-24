@@ -8,6 +8,7 @@ use python "input->" function, enter a line of a few letters, such as "abcd"
 import socket
 
 HOST = "172.20.10.11"
+#HOST = "127.0.0.1"
 PORT = 12345
 
 def main():

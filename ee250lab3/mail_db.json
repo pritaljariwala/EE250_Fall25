@@ -1,0 +1,23 @@
+[
+    {
+        "recipient": "recipient",
+        "sender": "sender",
+        "subject": "subject",
+        "body": "body",
+        "id": "4a339406-bdbb-48f2-89d7-0b8b9a0085ae"
+    },
+    {
+        "recipient": "recipient",
+        "sender": "sender",
+        "subject": "subject",
+        "body": "body",
+        "id": "69cafd7e-0559-4941-9303-ff34ace36c08"
+    },
+    {
+        "recipient": "recipient@example.com",
+        "sender": "sender@example.com",
+        "subject": "Subject here",
+        "body": "This is the body of the mail",
+        "id": "5bd4e30a-33c9-4d85-9e17-58316a486354"
+    }
+]
