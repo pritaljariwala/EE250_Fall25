@@ -14,25 +14,25 @@ def on_connect(client, userdata, flags, rc):
 
 def on_message_from_ping(client, userdata, message):
     number_received = int(message.payload.decode())
-    print(f"Received: {number_received}")
+    print(f"Received from ping: {number_received}")
 
     number_received += 1
     time.sleep(1)
     client.publish(pong, str(number_received))
-    print(f"Published response: {number_received}")
+    print(f"Published response to pong: {number_received}")
 
-def on_message_from_sub(client, userdata, message):
+def on_message_from_pong(client, userdata, message):
     number_received = int(message.payload.decode())
-    print(f"Received: {number_received}")
+    print(f"Received from pong: {number_received}")
 
     number_received += 1
     time.sleep(1)
     client.publish(ping, str(number_received))
-    print(f"Published response: {number_received}")
+    print(f"Published response to ping: {number_received}")
 
 client.on_connect = on_connect
 client.message_callback_add(ping, on_message_from_ping)
-client.message_callback_add(pong, on_message_from_sub)
+client.message_callback_add(pong, on_message_from_pong)
 
 
 if __name__ == "__main__":
