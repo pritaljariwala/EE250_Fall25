@@ -30,7 +30,6 @@ def on_message_from_sub(client, userdata, message):
     client.publish(ping, str(number_received))
     print(f"Published response: {number_received}")
 
-
 client.on_connect = on_connect
 client.message_callback_add(ping, on_message_from_ping)
 client.message_callback_add(pong, on_message_from_sub)
