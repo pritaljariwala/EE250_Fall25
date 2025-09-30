@@ -1,6 +1,10 @@
 """EE 250L Lab 04 Starter Code
 Run vm_pub.py in a separate terminal on your VM."""
 
+# Prital Jariwala
+# Lucas Greer
+# https://github.com/pritaljariwala/EE250_Fall25/tree/main
+
 import paho.mqtt.client as mqtt
 import time 
 """This function (or "callback") will be executed when this client receives 

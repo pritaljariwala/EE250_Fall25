@@ -1,5 +1,10 @@
+# Prital Jariwala
+# Lucas Greer
+# https://github.com/pritaljariwala/EE250_Fall25/tree/main
+
 import paho.mqtt.client as mqtt
 import time
+
 
 broker = "172.20.10.11"
 port = 1883
