@@ -1,8 +1,8 @@
 # Lab 5
 
 ## Team Members
-- team member 1
-- team member 2
+- Prital Jariwala
+- Lucas Greer
 
 ## Lab Question Answers
 
