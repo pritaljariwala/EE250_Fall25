@@ -46,12 +46,14 @@ plt.figure(figsize = (10, 6))
 for index, row in tcp_data_2m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0: 
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'TCP')
 
 for index, row in udp_data_2m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0: 
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'UDP')
 
 plt.title('Test Runs vs Throughput (2m)')
 plt.xlabel('Test Run #')
@@ -68,12 +70,14 @@ plt.figure(figsize = (10,6))
 for index, row in tcp_data_5m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0: 
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'TCP')
 
 for index, row in udp_data_5m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0: 
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'UDP')
 
 plt.title('Test Runs vs Throughput (5m)')
 plt.xlabel('Test Run #')
@@ -90,12 +94,14 @@ plt.figure(figsize = (10,6))
 for index, row in tcp_data_8m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0: 
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'TCP')
 
 for index, row in udp_data_8m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0:
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'UDP')
 
 plt.title('Test Runs vs Throughput (8m)')
 plt.xlabel('Test Run #')
@@ -112,12 +118,14 @@ plt.figure(figsize = (10,6))
 for index, row in tcp_data_10m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0:
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'TCP')
 
 for index, row in udp_data_10m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0:
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'UDP')
 
 plt.title('Test Runs vs Throughput (10m)')
 plt.xlabel('Test Run #')
@@ -134,12 +142,14 @@ plt.figure(figsize = (10,6))
 for index, row in tcp_data_15m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0:
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'TCP')
 
 for index, row in udp_data_15m.iterrows():
     distance = row['Distance']
     run_no = row[['Run1', 'Run2', 'Run3', 'Run4', 'Run5']]
-    plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'Distance {distance}m')
+    if index == 0:
+        plt.plot([1, 2, 3, 4, 5], run_no, marker = 'o', label = f'UDP')
 
 plt.title('Test Runs vs Throughput (15m)')
 plt.xlabel('Test Run #')
