@@ -10,19 +10,16 @@ ultrasonic_ranger = 2
 potentiometer = 0
 grovepi.pinMode(potentiometer,"INPUT")
 
-grovepi.lcdInit()
-
-# clear lcd screen  before starting main loop
-grovepi.setText("")
-
-
-# TODO:read distance value from Ultrasonic Ranger and print distance on LCD
+# clear lcd screen  before starting main 
+setText("")
+timer = 0
+previous_reading = 0
+previous_thresh = 0
 while True:
   try:
     # Read distance value from Ultrasonic
     ultrasonic_reading = grovepi.ultrasonicRead(ultrasonic_ranger)
-    threshold = grovepi.analogRead(potentiometer)
-    print(f"Distance: {ultrasonic_reading}")
+    threshold = grovepi.analogRead(potentiometer)/10
 
     if ultrasonic_reading < threshold:
       obj_present = "OBJ PRES"
@@ -32,9 +29,24 @@ while True:
   except Exception as e:
     print ("Error:{}".format(e))
   time.sleep(0.1)
-        
+
     
   # TODO: format LCD text according to threshhold
-  grovepi.setText()
-  #except IOError:
-  #  print("Error")
+  if (previous_thresh < threshold or previous_reading != ultrasonic_reading):
+        setText(str(ultrasonic_reading) + "\n" + str(threshold) + " " + obj_present)
+        previous_threshold = threshold
+        previous_reading = ultrasonic_reading
+  elif (previous_thresh != threshold or ultrasonic_reading != previous_reading):
+        setText(str(ultrasonic_reading) + "\n" + str(threshold) + " ")
+        previous_threshold = threshold
+        previous_reading = ultrasonic_reading
+  else:
+        timer = timer + 1
+
+
+
+
+
+
+
+
