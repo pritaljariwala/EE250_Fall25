@@ -36,5 +36,5 @@ while True:
     
   # TODO: format LCD text according to threshhold
   grovepi.setText()
-  except IOError:
-    print("Error")
+  #except IOError:
+  #  print("Error")
