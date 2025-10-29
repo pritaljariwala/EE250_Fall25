@@ -21,13 +21,14 @@ lux_treshold=0  # change this value
 sound_treshold=0 # change this value
 
 
-
 while True: 
   time.sleep(0.5) 
 
   #Following commands control the state of the output
-  #GPIO.output(pin, GPIO.HIGH)
-  #GPIO.output(pin, GPIO.LOW)
+  GPIO.output(pin, GPIO.HIGH)
+  GPIO.output(pin, GPIO.LOW)
 
   # get reading from adc 
-  # mcp.read_adc(adc_channel)
+  mcp.read_adc(adc_channel)
+
+
