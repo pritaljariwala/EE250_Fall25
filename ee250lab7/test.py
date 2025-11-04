@@ -7,7 +7,6 @@ import Adafruit_MCP3008
 GPIO.setmode(GPIO.BOARD)
 LED_PIN = 11  # physical pin 11 for LED
 GPIO.setup(LED_PIN, GPIO.OUT)
-
 # === SPI + MCP3008 SETUP ===
 SPI_PORT = 0
 SPI_DEVICE = 0
